@@ -1,3 +1,27 @@
+## Requriment
+
+```
+pip install -r requirements.txt
+```
+## Make some changes in site package
+### Step 1 :
+```
+cd /home/ubuntu/.local/lib/python3.10/site-packages/fedml/core/distributed/crypto
+```
+### Step 2 :
+
+```
+nano cypto_api.py
+```
+### Step 3 :
+
+ Comment line 5 as 
+```
+# from ecies.utils import aes_decrypt, aes_encrypt
+```
+
+save it
+
 ## Training Script
 
 At the client side, the client ID (a.k.a rank) starts from 1.
@@ -14,27 +38,16 @@ If you want to use secret key to encrypt models, you should set secret key by ca
 
 At the server side, run the following script:
 ```
-bash run_server.sh your_run_id
+bash run_server.sh 
 ```
 
 For client 1, run the following script:
 ```
-bash run_client_1.sh 1 your_run_id
+bash run_client_1.sh
 ```
 For client 2, run the following script:
 ```
-bash run_client_2.sh 2 your_run_id
+bash run_client_2.sh 2 
 ```
 Note: please run the server first.
 
-## A Better User-experience with FedML MLOps (open.fedml.ai)
-To reduce the difficulty and complexity of these CLI commands. We recommend you to use our MLOps (open.fedml.ai).
-FedML MLOps provides:
-- Install Client Agent and Login
-- Inviting Collaborators and group management
-- Project Management
-- Experiment Tracking (visualizing training results)
-- monitoring device status
-- visualizing system performance (including profiling flow chart)
-- distributed logging
-- model serving
