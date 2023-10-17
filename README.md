@@ -43,11 +43,11 @@ bash run_server.sh
 
 For client 1, run the following script:
 ```
-bash run_client_1.sh
+bash run_client_1.sh 1 your_run_id
 ```
 For client 2, run the following script:
 ```
-bash run_client_2.sh 2 
+bash run_client_2.sh 2 your_run_id
 ```
 Note: please run the server first.
 
