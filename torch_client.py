@@ -1,6 +1,6 @@
 import fedml
 from fedml import FedMLRunner
-from .model.logisticRegression import LogisticRegression
+from model.logisticRegression import LogisticRegression
 
 if __name__ == "__main__":
     args = fedml.init()
