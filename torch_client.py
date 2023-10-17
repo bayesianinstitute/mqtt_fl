@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # load model
     # model = fedml.model.create(args, output_dim)
     input_dim=28*28
-    hidden_dim=128
+    hidden_dim=28*28
     model=LogisticRegression(input_dim,hidden_dim,output_dim)
 
     # start training
