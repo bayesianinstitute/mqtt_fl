@@ -1,5 +1,6 @@
 import fedml
 from fedml import FedMLRunner
+from .model.logisticRegression import LogisticRegression
 
 if __name__ == "__main__":
     args = fedml.init()
@@ -11,7 +12,8 @@ if __name__ == "__main__":
     dataset, output_dim = fedml.data.load(args)
 
     # load model
-    model = fedml.model.create(args, output_dim)
+    # model = fedml.model.create(args, output_dim)
+    model=LogisticRegression(28*28,output_dim)
 
     # start training
     fedml_runner = FedMLRunner(args, device, dataset, model)
