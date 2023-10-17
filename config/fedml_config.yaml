@@ -16,7 +16,7 @@ data_args:
   test_size: 5000
 
 model_args:
-  model: "lr"
+  model: "cnn"
   model_file_cache_folder: "./model_file_cache" # will be filled by the server automatically
   global_model_file_path: "./model_file_cache/global_model.pt"
 
